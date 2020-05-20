@@ -1,0 +1,34 @@
+<center>
+
+<div>
+<h2>What did you do today?</h2>
+
+<form method='post'>
+    {% csrf_token %}
+{% for field  in show %}
+<p>{{field.Goals}}{{field.Check}}{{field.Date}}</p>
+{% endfor %}
+</form>
+</div>
+</center>
+
+
+
+<hr>
+<table border="1">
+<tr>
+<th>Date</th>
+<th>Goal</th>
+<th>Check</th>
+</tr>
+
+<tr>
+{% for field  in show %}
+<td>{{field.Date}}</td>
+
+<td>{{field.Goals}}</td> 
+<td>{{field.Check}}</td> 
+</tr>
+    {% endfor %}
+
+</table>

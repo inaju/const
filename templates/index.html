@@ -1,0 +1,13 @@
+<center>
+<h2>What do you want to do everyday</h2>
+
+
+<form method="post" >
+    {% csrf_token %}
+    <p>
+{{form.label_tag}}{{form.as_p}}</p>
+
+    <button type="submit" value="Submit" >Submit</button>
+</form>
+
+</center>

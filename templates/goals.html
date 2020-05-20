@@ -1,0 +1,12 @@
+<center>
+<h2>What did you do today?</h2>
+
+<form method='post'>
+    {% csrf_token %}
+{% for goals  in show_goals %}
+    <p>{{goals}}<br>{{check}}</p>
+    
+    {% endfor %}
+        <input type="submit" value="Submit" />
+
+</form>

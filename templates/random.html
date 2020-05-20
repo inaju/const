@@ -1,0 +1,12 @@
+
+<form method="post" action="goals/">
+    {% csrf_token %}
+    <div class="fieldWrapper">
+                {{form.Goal.label_tag}}{{form.Goal}}{{ form.Goal.errors }}
+                {{form.Date.label_tag}}{{form.Date}}{{ form.Date.errors }}
+
+    </div>
+
+    <button type="submit" value="Submit" >Submit</button>
+</form>
+
